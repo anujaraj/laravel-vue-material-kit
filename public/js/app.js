@@ -521,7 +521,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_es6_object_keys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.object.keys */ "./node_modules/core-js/modules/es6.object.keys.js");
 /* harmony import */ var core_js_modules_es6_object_keys__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_keys__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var C_xampp_htdocs_sac_laravel_vue_material_kit_node_modules_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var C_Users_Anuja_raj_Verma_laravel_vue_material_kit_node_modules_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
 /* harmony import */ var core_js_modules_es6_number_constructor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es6.number.constructor */ "./node_modules/core-js/modules/es6.number.constructor.js");
 /* harmony import */ var core_js_modules_es6_number_constructor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_number_constructor__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! nouislider */ "./node_modules/nouislider/distribute/nouislider.js");
@@ -532,7 +532,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { if (i % 2) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { Object(C_xampp_htdocs_sac_laravel_vue_material_kit_node_modules_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(target, key, source[key]); }); } else { Object.defineProperties(target, Object.getOwnPropertyDescriptors(arguments[i])); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { if (i % 2) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { Object(C_Users_Anuja_raj_Verma_laravel_vue_material_kit_node_modules_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(target, key, source[key]); }); } else { Object.defineProperties(target, Object.getOwnPropertyDescriptors(arguments[i])); } } return target; }
 
 //
 //
@@ -2128,6 +2128,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -2137,8 +2150,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       rollno: null,
-      dob: null,
-      password: null
+      password: null,
+      selectedLabeled: null
     };
   },
   props: {
@@ -2257,22 +2270,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components */ "./resources/js/components/index.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -19274,12 +19271,12 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "md-layout-item md-size-33 md-small-size-66 md-xsmall-size-100 md-medium-size-40 mx-auto"
+                  "md-layout-item md-size-66 md-small-size-77 md-xsmall-size-100 md-medium-size-40 mx-auto"
               },
               [
                 _c(
                   "login-card",
-                  { attrs: { "header-color": "#FB785C" } },
+                  { attrs: { "header-color": "orange" } },
                   [
                     _c(
                       "h4",
@@ -19340,26 +19337,27 @@ var render = function() {
                       "md-field",
                       {
                         staticClass: "md-form-group",
-                        attrs: { slot: "inputs" },
-                        slot: "inputs"
+                        attrs: { slot: "datepicker" },
+                        slot: "datepicker"
                       },
                       [
                         _c("i", { staticClass: "far fa-calendar-alt fa-2x" }),
                         _vm._v(" "),
                         _c("md-icon", [_vm._v("calender")]),
                         _vm._v(" "),
-                        _c("label", [_vm._v("DOB")]),
-                        _vm._v(" "),
-                        _c("md-input", {
-                          attrs: { type: "email" },
-                          model: {
-                            value: _vm.email,
-                            callback: function($$v) {
-                              _vm.email = $$v
-                            },
-                            expression: "email"
-                          }
-                        })
+                        _c(
+                          "md-datepicker",
+                          {
+                            model: {
+                              value: _vm.selectedLabeled,
+                              callback: function($$v) {
+                                _vm.selectedLabeled = $$v
+                              },
+                              expression: "selectedLabeled"
+                            }
+                          },
+                          [_c("label", [_vm._v("Select date")])]
+                        )
                       ],
                       1
                     ),
@@ -19374,7 +19372,7 @@ var render = function() {
                       [
                         _c("md-icon", [_vm._v("lock_outline")]),
                         _vm._v(" "),
-                        _c("label", [_vm._v("Password...")]),
+                        _c("label", [_vm._v("Password")]),
                         _vm._v(" "),
                         _c("md-input", {
                           model: {
@@ -19396,7 +19394,11 @@ var render = function() {
                         attrs: { slot: "footer" },
                         slot: "footer"
                       },
-                      [_vm._v("\n              Get Started\n            ")]
+                      [
+                        _c("h5", { staticClass: "red--text lighten-1" }, [
+                          _vm._v("Get Started")
+                        ])
+                      ]
                     )
                   ],
                   1
@@ -19626,48 +19628,12 @@ var render = function() {
                     })
                   ]),
                   _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "name" },
-                    [
-                      _c("h3", { staticClass: "title" }, [
-                        _vm._v("Anuja Raj Verma")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "md-button",
-                        {
-                          staticClass: "md-just-icon md-simple md-dribbble",
-                          attrs: { href: "javascript:void(0)" }
-                        },
-                        [_c("i", { staticClass: "fab fa-dribbble" })]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "md-button",
-                        {
-                          staticClass: "md-just-icon md-simple md-twitter",
-                          attrs: { href: "javascript:void(0)" }
-                        },
-                        [_c("i", { staticClass: "fab fa-twitter" })]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "md-button",
-                        {
-                          staticClass: "md-just-icon md-simple md-pinterest",
-                          attrs: { href: "javascript:void(0)" }
-                        },
-                        [_c("i", { staticClass: "fab fa-pinterest" })]
-                      )
-                    ],
-                    1
-                  )
+                  _vm._m(0)
                 ])
               ])
             ]),
             _vm._v(" "),
-            _vm._m(0),
+            _vm._m(1),
             _vm._v(" "),
             _c(
               "div",
@@ -19677,7 +19643,7 @@ var render = function() {
                   "tabs",
                   {
                     attrs: {
-                      "tab-name": ["Gallery", "Articles", "Favorite"],
+                      "tab-name": ["Gallery", "Bucket", "Testimonials"],
                       "tab-icon": ["camera", "palette", "favorite"],
                       plain: "",
                       "nav-pills-icons": "",
@@ -19885,7 +19851,7 @@ var render = function() {
                       _c("div", { staticClass: "md-layout" }, [
                         _c(
                           "div",
-                          { staticClass: "md-layout-item md-size-25 ml-auto" },
+                          { staticClass: "md-layout-item md-size-50" },
                           [
                             _c("img", {
                               staticClass: "rounded",
@@ -19895,14 +19861,8 @@ var render = function() {
                             _c("img", {
                               staticClass: "rounded",
                               attrs: { src: _vm.tabPane1[1].image }
-                            })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "md-layout-item md-size-25 mr-auto" },
-                          [
+                            }),
+                            _vm._v(" "),
                             _c("img", {
                               staticClass: "rounded",
                               attrs: { src: _vm.tabPane1[3].image }
@@ -20040,6 +20000,14 @@ var render = function() {
   )
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "name" }, [
+      _c("h3", { staticClass: "title" }, [_vm._v("Anuja Raj Verma")])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -66938,7 +66906,7 @@ module.exports = "/images/profile_city.jpg?435c148e7c651c91b5eed09eb46cb112";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/vue-mk-header.jpg?98fb6ce8d0e9ce5c4970f19d50d06757";
+module.exports = "/images/vue-mk-header.jpg?f5d1ea150babfc5f46965c2e1e41cf29";
 
 /***/ }),
 
@@ -69491,8 +69459,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\sac\laravel-vue-material-kit\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\sac\laravel-vue-material-kit\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Anuja raj Verma\laravel-vue-material-kit\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Anuja raj Verma\laravel-vue-material-kit\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

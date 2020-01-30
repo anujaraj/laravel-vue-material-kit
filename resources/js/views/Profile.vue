@@ -19,22 +19,7 @@
                 </div>
                 <div class="name">
                   <h3 class="title">Anuja Raj Verma</h3>
-                
-                  <md-button
-                    href="javascript:void(0)"
-                    class="md-just-icon md-simple md-dribbble"
-                    ><i class="fab fa-dribbble"></i
-                  ></md-button>
-                  <md-button
-                    href="javascript:void(0)"
-                    class="md-just-icon md-simple md-twitter"
-                    ><i class="fab fa-twitter"></i
-                  ></md-button>
-                  <md-button
-                    href="javascript:void(0)"
-                    class="md-just-icon md-simple md-pinterest"
-                    ><i class="fab fa-pinterest"></i
-                  ></md-button>
+              
                 </div>
               </div>
             </div>
@@ -46,7 +31,7 @@
           </div>
           <div class="profile-tabs">
             <tabs
-              :tab-name="['Gallery', 'Articles', 'Favorite']"
+              :tab-name="['Gallery', 'Bucket', 'Testimonials']"
               :tab-icon="['camera', 'palette', 'favorite']"
               plain
               nav-pills-icons
@@ -58,42 +43,42 @@
 
 
                   <div class="md-list">
-      <li class="md-list-item">
-      <a href="javascript:void(0)" class="md-list-item-router md-list-item-container md-button-clean dropdown">
-        <div class="md-list-item-content">
-          <drop-down direction="down">
-            <md-button slot="title" class="md-button md-button-link md-simple dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">apps</i>
-              <p>SELECT A CATEGORY</p>
-            </md-button>
-            <ul class="dropdown-menu dropdown-with-icons">
-              <li>
-                <a href="javascript:void(0)">
-                  <i class="material-icons">layers</i>
-                  <p>Department Photos</p>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">
-                  <i class="material-icons">content_paste</i>
-                  <p>Hall Photos</p>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">
-                  <i class="material-icons">content_paste</i>
-                  <p>Fest Photos</p>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">
-                  <i class="material-icons">content_paste</i>
-                  <p>Other Moments At KGP </p>
-                </a>
-              </li>
-            </ul>
-          </drop-down>
-        </div>
+                   <li class="md-list-item">
+                    <a href="javascript:void(0)" class="md-list-item-router md-list-item-container md-button-clean dropdown">
+                    <div class="md-list-item-content">
+                    <drop-down direction="down">
+                    <md-button slot="title" class="md-button md-button-link md-simple dropdown-toggle" data-toggle="dropdown">
+                    <i class="material-icons">apps</i>
+                    <p>SELECT A CATEGORY</p>
+                  </md-button>
+                    <ul class="dropdown-menu dropdown-with-icons">
+                  <li>
+                     <a href="javascript:void(0)">
+                     <i class="material-icons">layers</i>
+                     <p>Department Photos</p>
+                     </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                    <i class="material-icons">content_paste</i>
+                    <p>Hall Photos</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                    <i class="material-icons">content_paste</i>
+                    <p>Fest Photos</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                    <i class="material-icons">content_paste</i>
+                    <p>Other Moments At KGP </p>
+                    </a>
+                 </li>
+                </ul>
+              </drop-down>
+         </div>
       </a>
     </li>
   </div>
@@ -110,14 +95,13 @@
                    
                 </div>
                 <div class="md-layout">
-                  <div class="md-layout-item md-size-25 ml-auto">
+                  <div class="md-layout-item md-size-50">
                     <img :src="tabPane1[0].image" class="rounded" />
                     <img :src="tabPane1[1].image" class="rounded" />
-                  </div>
-                  <div class="md-layout-item md-size-25 mr-auto">
-                    <img :src="tabPane1[3].image" class="rounded" />
+                     <img :src="tabPane1[3].image" class="rounded" />
                     <img :src="tabPane1[2].image" class="rounded" />
                   </div>
+                
                 </div>
               </template>
               <template slot="tab-pane-2">

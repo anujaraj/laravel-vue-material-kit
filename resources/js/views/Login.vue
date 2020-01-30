@@ -5,9 +5,9 @@
       <div class="container">
         <div class="md-layout">
           <div
-            class="md-layout-item md-size-33 md-small-size-66 md-xsmall-size-100 md-medium-size-40 mx-auto"
+            class="md-layout-item md-size-66 md-small-size-77 md-xsmall-size-100 md-medium-size-40 mx-auto"
           >
-            <login-card header-color="#FB785C">
+            <login-card header-color="orange">
               <h4 slot="title" class="card-title">Login</h4>
               <md-button
                 slot="buttons"
@@ -19,25 +19,38 @@
                 <i class="fab fa-google-plus-g"></i>
               </md-button>
               <p slot="description" class="description">Or Be Classical</p>
+              
               <md-field class="md-form-group" slot="inputs">
-                <md-icon>face</md-icon>
-                <label>RollNumber</label>
-                <md-input v-model="rollno"></md-input>
+                 <md-icon>face</md-icon>
+                 <label>RollNumber</label>
+                 <md-input v-model="rollno"></md-input>
               </md-field>
-              <md-field class="md-form-group" slot="inputs">
-                <i class="far fa-calendar-alt fa-2x" ></i>
+              
+             
       
-                <md-icon>calender</md-icon>
-                <label>DOB</label>
-                <md-input v-model="email" type="email"></md-input>
+              
+               <md-field class="md-form-group" slot="datepicker">
+        
+                  <i class="far fa-calendar-alt fa-2x" ></i>
+                   <md-icon>calender</md-icon>
+                   
+                   
+                   <md-datepicker v-model="selectedLabeled" >
+                   <label>Select date</label>
+                   </md-datepicker>
+                  
               </md-field>
+                
+                 
               <md-field class="md-form-group" slot="inputs">
-                <md-icon>lock_outline</md-icon>
-                <label>Password...</label>
-                <md-input v-model="password"></md-input>
+                      <md-icon>lock_outline</md-icon>
+                       <label>Password</label>
+                      <md-input v-model="password"></md-input>
+                    
               </md-field>
-              <md-button slot="footer" class="md-simple md-success md-lg">
-                Get Started
+              
+              <md-button slot="footer" class="md-simple md-success md-lg" >
+                <h5 class="red--text lighten-1">Get Started</h5>
               </md-button>
             </login-card>
           </div>
@@ -58,9 +71,11 @@ export default {
   data() {
     return {
       rollno: null,
-      dob: null,
-      password: null
+      
+      password: null,
+      selectedLabeled:null
     };
+   
   },
   props: {
     header: {
@@ -76,6 +91,8 @@ export default {
     }
   }
 };
+
+
 </script>
 
 <style lang="css"></style>
